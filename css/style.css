@@ -1,0 +1,89 @@
+@import url("components/avatar.css");
+@import url("components/button.css");
+@import url("components/banner.css");
+@import url("components/card.css");
+@import url("https://fonts.googleapis.com/css?family=Lora|Roboto");
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url("../images/background.jpg"); /* Chemin vers l'image */
+    background-size: cover; /* L'image couvre la bannière */
+    background-position: center; /* Centre l'image */
+    padding: 150px 0;
+    text-align: center;
+    position: relative; /* Nécessaire pour positionner l'overlay */
+    color: white; /* Couleur du texte */
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de l'overlay */
+    z-index: 1; /* Met l'overlay derrière le texte */
+}
+
+.banner h1, .banner h2 {
+    position: relative; /* Nécessaire pour mettre le texte au-dessus de l'overlay */
+    z-index: 2; /* S'assure que le texte est au-dessus de l'overlay */
+}
+
+.banner h1 {
+    font-size: 70px;
+}
+
+.banner h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-blue {
+    background-color: #6D71DD;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 20px 0;
+}

@@ -1,0 +1,15 @@
+.banner {
+	background-image: url(../../images/background.jpg);
+	color: black;
+	padding: 150 px 0px;
+	background-size: cover;
+	background-position: center;
+}
+.banner h1 {
+	font-size: 70px;
+	}
+
+.banner h2 {
+	font-size: 40px;
+	font-weight: lighter;
+	}
